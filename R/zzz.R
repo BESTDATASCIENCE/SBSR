@@ -18,8 +18,6 @@
 ### MA 02110-1301, USA
 
 
-.onLoad<- function(lib, pkg,...)
-
 .onAttach <- function(lib, pkg,...){
     packageStartupMessage(BESTWelcomeMessage())
 }
@@ -35,7 +33,7 @@ BESTWelcomeMessage <- function(){
        "y nuestra página de github:\n",
        "https://github.com/BESTDATASCIENCE\n",
         "\n",
-        "To suppress this message use:\n",
+        "Para suprimir este mensaje use:\n",
         "suppressPackageStartupMessages(library(SBSR))\n",
           sep="")
 }
