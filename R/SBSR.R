@@ -11,8 +11,8 @@ NULL
 #'
 #' @docType data
 #' @keywords datasets
-#' @name BancosIndFin
-#' @usage data(BancosIndFin)
+#' @name total
+#' @usage data(total)
 #' @format Base de datos para trabajar data de los indicadores financieros de los bancos locales.
 #'
 NULL
