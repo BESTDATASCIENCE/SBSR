@@ -1,4 +1,4 @@
-#' Trabaja con mapas de Peru. Creado por BEST
+#' Trabaja con data de los bancos de Peru. Creado por BEST
 #'
 #' @name SBSR
 #' @docType package
