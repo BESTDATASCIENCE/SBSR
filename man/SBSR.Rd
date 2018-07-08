@@ -4,7 +4,7 @@
 \name{SBSR}
 \alias{SBSR}
 \alias{SBSR-package}
-\title{Trabaja con mapas de Peru. Creado por BEST}
+\title{Trabaja con data de los bancos de Peru. Creado por BEST}
 \description{
-Trabaja con mapas de Peru. Creado por BEST
+Trabaja con data de los bancos de Peru. Creado por BEST
 }

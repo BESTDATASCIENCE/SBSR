@@ -1,13 +1,13 @@
 Package: SBSR
 Type: Package
 Title: Trabaja con data de la SBS. Creado por BEST
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
-    person("Arturo", "Chian", "arturob.chian@gmail.com", role = c("aut", "cre")
+    person(given="Arturo", family="Chian", email="arturob.chian@gmail.com", role = c("aut", "cre")
     ),
-    person("Raul", "Panduro","mesias.pch64@gmail.com", role = c("aut", "cre")
+    person(given="Raul", family="Panduro",email="mesias.pch64@gmail.com", role = c("aut")
     ),
-    person("Behavioral Economics & Data Science Team (BEST)", role = c("cph", "fnd"))
+    person("Behavioral Economics & Data Science Team (BEST)",email="contactanos@besteamperu.org", role = c("cph", "fnd"))
     )
 Description: Paquete de R disenado para trabajar de forma sencilla data de la SBS.
 URL: https://github.com/BESTDATASCIENCE/SBSR
