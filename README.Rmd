@@ -61,7 +61,7 @@ dygraph(bd)
 ```
 
 
-![SBS1](/img1.png)
+![SBS1](/man/figures/img1.png)
 
 ## Codigo de conducta
 

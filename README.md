@@ -46,7 +46,7 @@ utilizando esta funcion:
     bd<-xts(bd[,2:5],order.by = as.Date(bd$Fecha))
     dygraph(bd)
 
-![SBS1](/img1.png)
+![SBS1](/man/figures/img1.png)
 
 Codigo de conducta
 ------------------
