@@ -1,5 +1,7 @@
 ---
 output: github_document
+always_allow_html: yes
+
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -45,7 +47,7 @@ devtools::install_github("BESTDATASCIENCE/SBSR")
 
 El paquete cuenta con data de los bancos y lo puedes usar facilmente utilizando esta funcion:
 
-```{r, eval = FALSE}
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
 packs=c("SBSR","xts","dplyr","tidyr","dygraphs","ggplot2","reshape2","lubridate")
 invisible(lapply(packs,library,character=T))
 data("bancos")
