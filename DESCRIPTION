@@ -2,14 +2,9 @@ Package: SBSR
 Type: Package
 Title: Trabaja con data de la SBS. Creado por BEST
 Version: 0.1.0
-
-Authors@R: c(person("Arturo Chian", "Developer", role = c("aut", "cre"),
-                     email = "arturob.chian@gmail.com"),
-              person("Pat", "Developer", role = c("aut", "cre")))
-
-Author: BEST (Behavioral Economics and Data Science Team) [aut, cre],
-        Arturo Chian [aut, cre],
-        Raul Panduro [aut, cre]
+Author: BEST (Behavioral Economics and Data Science Team)
+        Arturo Chian
+        Raul Panduro
 Maintainer: Arturo Chian <arturob.chian@gmail.com>
 Description: Paquete de R disenado para trabajar de forma sencilla data de la SBS.
 License: MIT
