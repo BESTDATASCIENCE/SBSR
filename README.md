@@ -12,10 +12,21 @@ Aprende a utilizarlo en `vignette("SBSR")` o
 Instalacion
 -----------
 
-    # Instala primero devtools
-    install.packages("devtools")
+    # Instalemos primero los paquetes necesarios de forma inteligente! Usemos la siguiente funcion: copiala y pega en tu consola de R, o ponlo en un script y usa control control + enter.
 
-    # Instala la Ultima version usando
+    rpak <- function(pkg){
+        new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+        if (length(new.pkg)) 
+            install.packages(new.pkg, dependencies = TRUE)
+        sapply(pkg, require, character.only = TRUE)
+    }
+
+    # los paquetes que necesitamos!
+
+    packages <- c("ggplot2", "dplyr", "reshape2","tidyr","xts","zoo","dygraphs","devtools","reshape2","lubridate")
+    rpak(packages)
+
+    # Instala la ultima version de nuestro paquete usando
     devtools::install_github("BESTDATASCIENCE/SBSR")
 
 Uso
@@ -24,13 +35,20 @@ Uso
 El paquete cuenta con data de los bancos y lo puedes usar facilmente
 utilizando esta funcion:
 
-    library(SBSR)
+    packs=c("SBSR","xts","dplyr","tidyr","dygraphs","ggplot2","reshape2","lubridate")
+    invisible(lapply(packs,library,character=T))
     data("bancos")
-    head(bancos)
+
+    bd<-bancos %>% filter (Entidad %in% c("BCP","BBVA","Scotiabank","Interbank")) %>% select(Entidad,morosidad,Fecha)
+
+    bd<-bd %>%
+      spread(Entidad, morosidad)
+    bd<-xts(bd[,2:5],order.by = as.Date(bd$Fecha))
+    dygraph(bd)
 
 Codigo de conducta
 ------------------
 
-Por favor considerar que este paquete cuenta con [Contributor Code of
-Conduct](CODE_OF_CONDUCT.md). Al participar en este proyecto o
+Por favor considerar que este paquete cuenta con un [Codigo de Conducta
+del Contribuidor](CODE_OF_CONDUCT.md). Al participar en este proyecto o
 utilizarlo, se asume que estas de acuerdo con estos terminos.

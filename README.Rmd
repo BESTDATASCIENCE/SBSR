@@ -31,7 +31,7 @@ rpak <- function(pkg){
     sapply(pkg, require, character.only = TRUE)
 }
 
-# los quetes que necesitamos!
+# los paquetes que necesitamos!
 
 packages <- c("ggplot2", "dplyr", "reshape2","tidyr","xts","zoo","dygraphs","devtools","reshape2","lubridate")
 rpak(packages)
