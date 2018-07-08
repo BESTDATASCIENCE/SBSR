@@ -30,7 +30,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">SBSR</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.1</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
       </span>
     </div>
 
@@ -39,7 +39,7 @@
 <li>
   <a href="index.html">
     <span class="fa fa-home fa-lg"></span>
-     
+
   </a>
 </li>
 <li>
@@ -50,7 +50,7 @@
 <li>
   <a href="https://github.com/BESTDATASCIENCE/SBSR">
     <span class="fa fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul>
@@ -61,13 +61,13 @@
 </div>
 <!--/.navbar -->
 
-      
+
       </header><div class="row">
   <div class="col-md-9 contents">
-    
 
-    
-    
+
+
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <div id="sbsr" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
@@ -78,24 +78,45 @@
 <div id="instalacion" class="section level2">
 <h2 class="hasAnchor">
 <a href="#instalacion" class="anchor"></a>Instalacion</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Instala primero devtools</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">"devtools"</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co"># Instala la Ultima version usando</span></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"BESTDATASCIENCE/SBSR"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Instalemos primero los paquetes necesarios de forma inteligente! Usemos la siguiente funcion: copiala y pega en tu consola de R, o ponlo en un script y usa control control + enter.</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">rpak &lt;-<span class="st"> </span><span class="cf">function</span>(pkg){</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">    new.pkg &lt;-<span class="st"> </span>pkg[<span class="op">!</span>(pkg <span class="op">%in%</span><span class="st"> </span><span class="kw">installed.packages</span>()[, <span class="st">"Package"</span>])]</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">    <span class="cf">if</span> (<span class="kw">length</span>(new.pkg)) </a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">        <span class="kw">install.packages</span>(new.pkg, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">    <span class="kw">sapply</span>(pkg, require, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">}</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co"># los paquetes que necesitamos!</span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">packages &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"dplyr"</span>, <span class="st">"reshape2"</span>,<span class="st">"tidyr"</span>,<span class="st">"xts"</span>,<span class="st">"zoo"</span>,<span class="st">"dygraphs"</span>,<span class="st">"devtools"</span>,<span class="st">"reshape2"</span>,<span class="st">"lubridate"</span>)</a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="kw">rpak</span>(packages)</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15"><span class="co"># Instala la ultima version de nuestro paquete usando</span></a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"BESTDATASCIENCE/SBSR"</span>)</a></code></pre></div>
 </div>
 <div id="uso" class="section level2">
 <h2 class="hasAnchor">
 <a href="#uso" class="anchor"></a>Uso</h2>
 <p>El paquete cuenta con data de los bancos y lo puedes usar facilmente utilizando esta funcion:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(SBSR)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">data</span>(<span class="st">"bancos"</span>)</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw">head</span>(bancos)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">packs=<span class="kw">c</span>(<span class="st">"SBSR"</span>,<span class="st">"xts"</span>,<span class="st">"dplyr"</span>,<span class="st">"tidyr"</span>,<span class="st">"dygraphs"</span>,<span class="st">"ggplot2"</span>,<span class="st">"reshape2"</span>,<span class="st">"lubridate"</span>)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">invisible</span>(<span class="kw">lapply</span>(packs,library,<span class="dt">character=</span>T))</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw">data</span>(<span class="st">"bancos"</span>)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">bd&lt;-bancos <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span> (Entidad <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">"BCP"</span>,<span class="st">"BBVA"</span>,<span class="st">"Scotiabank"</span>,<span class="st">"Interbank"</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(Entidad,morosidad,Fecha)</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">bd&lt;-bd <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="st">  </span><span class="kw">spread</span>(Entidad, morosidad)</a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">bd&lt;-<span class="kw">xts</span>(bd[,<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>],<span class="dt">order.by =</span> <span class="kw">as.Date</span>(bd<span class="op">$</span>Fecha))</a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="kw">dygraph</span>(bd)</a></code></pre></div>
+<div class="figure">
+<img src="../../../../../../man/figures/img1.png" alt="SBS1"><p class="caption">SBS1</p>
+</div>
 </div>
 <div id="codigo-de-conducta" class="section level2">
 <h2 class="hasAnchor">
 <a href="#codigo-de-conducta" class="anchor"></a>Codigo de conducta</h2>
-<p>Por favor considerar que este paquete cuenta con <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. Al participar en este proyecto o utilizarlo, se asume que estas de acuerdo con estos terminos.</p>
+<p>Por favor considerar que este paquete cuenta con un <a href="CODE_OF_CONDUCT.html">Codigo de Conducta del Contribuidor</a>. Al participar en este proyecto o utilizarlo, se asume que estas de acuerdo con estos terminos.</p>
 </div>
 </div>
   </div>
@@ -147,7 +168,7 @@
       </footer>
 </div>
 
-  
+
 
   </body>
 </html>
