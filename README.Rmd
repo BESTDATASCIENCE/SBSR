@@ -47,7 +47,7 @@ devtools::install_github("BESTDATASCIENCE/SBSR")
 
 El paquete cuenta con data de los bancos y lo puedes usar facilmente utilizando esta funcion:
 
-```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+```{r, eval = F,message=FALSE,warning=FALSE,results='asis'}
 packs=c("SBSR","xts","dplyr","tidyr","dygraphs","ggplot2","reshape2","lubridate")
 invisible(lapply(packs,library,character=T))
 data("bancos")
@@ -59,6 +59,9 @@ bd<-bd %>%
 bd<-xts(bd[,2:5],order.by = as.Date(bd$Fecha))
 dygraph(bd)
 ```
+
+
+![SBS1](/img1.png)
 
 ## Codigo de conducta
 
