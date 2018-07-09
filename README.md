@@ -12,7 +12,34 @@ Aprende a utilizarlo en `vignette("SBSR")` o
 Instalacion
 -----------
 
-    # Instalemos primero los paquetes necesarios de forma inteligente! Usemos la siguiente funcion: copiala y pega en tu consola de R, o ponlo en un script y usa control control + enter.
+### Instalacion para principiantes
+
+Lo primero que debemos hacer es instalar primero R en este
+[enlace](https://cran.r-project.org/bin/windows/base/) y luego RStudio
+en este [enlace](https://download1.rstudio.org/RStudio-1.1.453.exe).
+Posteriormente dentro de la consola se debera poner los siguientes
+scripts
+
+    # Los paquetes nuevos son instalados a traves de la funcion install.packages(), siempre entre comillas
+
+    install.packages("ggplot2")
+    install.packages("dplyr")
+    install.packages("reshape2")
+    install.packages("tidyr")
+    install.packages("xts")
+    install.packages("zoo")
+    install.packages("dygraphs")
+    install.packages("devtools")
+    install.packages("lubridate")
+    devtools::install_github("BESTDATASCIENCE/SBSR")
+
+### Instalacion para R Users
+
+Instalemos primero los paquetes necesarios de forma inteligente! Usemos
+la siguiente funcion: copiala y pega en tu consola de R, o ponlo en un
+script y usa control control + enter.
+
+    #apliquemos funciones para hacer el proceso mas veloz
 
     rpak <- function(pkg){
         new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
@@ -23,22 +50,42 @@ Instalacion
 
     # los paquetes que necesitamos!
 
-    packages <- c("ggplot2", "dplyr", "reshape2","tidyr","xts","zoo","dygraphs","devtools","reshape2","lubridate")
+    packages <- c("ggplot2", "dplyr", "reshape2","tidyr","xts","zoo","dygraphs","devtools","lubridate")
     rpak(packages)
 
     # Instala la ultima version de nuestro paquete usando
     devtools::install_github("BESTDATASCIENCE/SBSR")
 
-Uso
----
+Activacion de paquetes
+----------------------
 
-El paquete cuenta con data de los bancos y lo puedes usar facilmente
-utilizando esta funcion:
+### Activacion para principiantes
+
+Utilicemos la funcion `library()` para activar los paquetes instalados.
+
+    library(SBSR)
+    library(xts)
+    library(dplyr)
+    library(tidyr)
+    library(dygraphs)
+    library(ggplot2)
+    library(reshape2)
+    library(lubridate)
+
+### Activacion para R Users
+
+Utilicemos funciones para activar una lista de paquetes!
 
     packs=c("SBSR","xts","dplyr","tidyr","dygraphs","ggplot2","reshape2","lubridate")
     invisible(lapply(packs,library,character=T))
-    data("bancos")
 
+A probar el paquete!
+--------------------
+
+El paquete cuenta con data de los bancos y lo puedes usar facilmente
+utilizando el siguiente script:
+
+    data("bancos")
     bd<-bancos %>% filter (Entidad %in% c("BCP","BBVA","Scotiabank","Interbank")) %>% select(Entidad,morosidad,Fecha)
 
     bd<-bd %>%
@@ -46,7 +93,7 @@ utilizando esta funcion:
     bd<-xts(bd[,2:5],order.by = as.Date(bd$Fecha))
     dygraph(bd)
 
-![SBS1](/man/figures/img1.png)
+<img src="man/figures/img1.png" align="center" />
 
 Codigo de conducta
 ------------------

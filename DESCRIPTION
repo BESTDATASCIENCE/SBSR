@@ -1,7 +1,7 @@
 Package: SBSR
 Type: Package
 Title: Trabaja con data de la SBS. Creado por BEST
-Version: 0.1.2
+Version: 0.1.4
 Authors@R: c(
     person(given="Arturo", family="Chian", email="arturob.chian@gmail.com", role = c("aut", "cre")
     ),
