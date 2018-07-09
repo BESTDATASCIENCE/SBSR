@@ -1,5 +1,6 @@
 pandoc: 2.2.1
 pkgdown: 1.1.0
 pkgdown_sha: ~
-articles: []
+articles:
+  analisis-4-principales-bancos: analisis-4-principales-bancos.html
 
