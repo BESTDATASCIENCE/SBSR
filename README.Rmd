@@ -18,8 +18,9 @@ knitr::opts_chunk$set(
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
-SBSR es un paquete disenado para trabajar facilmente con data publica de la SBS. Este proyecto 
-es creado por [BEST](http://besteamperu.org). Aprende a utilizarlo en `vignette("SBSR")` o <https://bestdatascience.github.io/SBSR/index.html>.
+SBSR es un paquete disenado para trabajar facilmente con data publica de la SBS, de forma gratuita, libre y facil. Este proyecto 
+es creado por [Behavioral Economics & Data Science Team (BEST)](http://besteamperu.org). Aprende a utilizarlo con nuestros ejemplos en <https://bestdatascience.github.io/SBSR/index.html>, <https://bestdatascience.github.io/docs/articles/analisis-4-principales-bancos.html> y
+<https://bestdatascience.github.io/SBSR/docs/articles/analisis-banco-ripley-vs-banco-falabella.html>.
 
 ## Instalacion
 

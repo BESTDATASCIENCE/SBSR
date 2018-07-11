@@ -1,10 +1,10 @@
 ---
-title: "Analizando a los 4 principales bancos"
+title: "Analizando a los 4 Principales Bancos de Peru"
 author: "Arturo Chian"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Analizando a los 4 principales bancos}
+  %\VignetteIndexEntry{Analizando a los 4 Principales Bancos de Peru}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
