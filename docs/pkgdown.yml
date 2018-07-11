@@ -3,4 +3,5 @@ pkgdown: 1.1.0
 pkgdown_sha: ~
 articles:
   analisis-4-principales-bancos: analisis-4-principales-bancos.html
+  analisis-banco-ripley-vs-banco-falabella: analisis-banco-ripley-vs-banco-falabella.html
 
